@@ -78,10 +78,11 @@ flights %>%
 ```{r}
 flights %>%
   count(year, month, day) %>%
-  arrange(n > 1000)
+  filter(n > 1000) %>%
+  arrange(n)
 ```
 
-## 2.2 Utilice el concepto de slección por rango (aplicando el operado ":") para obtener las variables *year* hacia *day*. También agregue a esta selección *hour*, *origin*, *dest*, *tailnum*, *carrier*, *arr_delay*, *dep_delay*, por último almacene el resultado en la variable *flights_selected*.
+## 2.2 Utilice el concepto de selección por rango (aplicando el operado ":") para obtener las variables *year* hacia *day*. También agregue a esta selección *hour*, *origin*, *dest*, *tailnum*, *carrier*, *arr_delay*, *dep_delay*, por último almacene el resultado en la variable *flights_selected*.
 
 ```{r}
 flights_selected <- flights %>%
